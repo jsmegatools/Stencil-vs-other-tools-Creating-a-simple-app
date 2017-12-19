@@ -8,6 +8,157 @@ import '@stencil/router';
 
 
 import {
+  AppCategoriesSidebar as AppCategoriesSidebar
+} from './components/app-categories-sidebar/app-categories-sidebar';
+
+declare global {
+  interface HTMLAppCategoriesSidebarElement extends AppCategoriesSidebar, HTMLElement {
+  }
+  var HTMLAppCategoriesSidebarElement: {
+    prototype: HTMLAppCategoriesSidebarElement;
+    new (): HTMLAppCategoriesSidebarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-categories-sidebar": HTMLAppCategoriesSidebarElement;
+  }
+  interface ElementTagNameMap {
+    "app-categories-sidebar": HTMLAppCategoriesSidebarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-categories-sidebar": JSXElements.AppCategoriesSidebarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppCategoriesSidebarAttributes extends HTMLAttributes {
+      categories?: { id: number, name: string }[];
+    }
+  }
+}
+
+
+import {
+  AppCategory as AppCategory
+} from './components/app-category/app-category';
+
+declare global {
+  interface HTMLAppCategoryElement extends AppCategory, HTMLElement {
+  }
+  var HTMLAppCategoryElement: {
+    prototype: HTMLAppCategoryElement;
+    new (): HTMLAppCategoryElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-category": HTMLAppCategoryElement;
+  }
+  interface ElementTagNameMap {
+    "app-category": HTMLAppCategoryElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-category": JSXElements.AppCategoryAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppCategoryAttributes extends HTMLAttributes {
+      match?: any;
+    }
+  }
+}
+
+
+import {
+  AppHome as AppHome
+} from './components/app-home/app-home';
+
+declare global {
+  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  }
+  var HTMLAppHomeElement: {
+    prototype: HTMLAppHomeElement;
+    new (): HTMLAppHomeElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-home": HTMLAppHomeElement;
+  }
+  interface ElementTagNameMap {
+    "app-home": HTMLAppHomeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-home": JSXElements.AppHomeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppHomeAttributes extends HTMLAttributes {
+      categories?: { id: number, name: string }[];
+    }
+  }
+}
+
+
+import {
+  AppPopular as AppPopular
+} from './components/app-popular/app-popular';
+
+declare global {
+  interface HTMLAppPopularElement extends AppPopular, HTMLElement {
+  }
+  var HTMLAppPopularElement: {
+    prototype: HTMLAppPopularElement;
+    new (): HTMLAppPopularElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-popular": HTMLAppPopularElement;
+  }
+  interface ElementTagNameMap {
+    "app-popular": HTMLAppPopularElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-popular": JSXElements.AppPopularAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppPopularAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  AppRecipe as AppRecipe
+} from './components/app-recipe/app-recipe';
+
+declare global {
+  interface HTMLAppRecipeElement extends AppRecipe, HTMLElement {
+  }
+  var HTMLAppRecipeElement: {
+    prototype: HTMLAppRecipeElement;
+    new (): HTMLAppRecipeElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-recipe": HTMLAppRecipeElement;
+  }
+  interface ElementTagNameMap {
+    "app-recipe": HTMLAppRecipeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-recipe": JSXElements.AppRecipeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppRecipeAttributes extends HTMLAttributes {
+      categories?: { id: number, name: string }[];
+      match?: any;
+    }
+  }
+}
+
+
+import {
   MyApp as MyApp
 } from './components/my-app/my-app';
 
