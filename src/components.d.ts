@@ -11,6 +11,66 @@ import {
 } from '@stencil/router';
 
 import {
+  AppCategoriesSidebar as AppCategoriesSidebar
+} from './components/app-categories-sidebar/app-categories-sidebar';
+
+declare global {
+  interface HTMLAppCategoriesSidebarElement extends AppCategoriesSidebar, HTMLElement {
+  }
+  var HTMLAppCategoriesSidebarElement: {
+    prototype: HTMLAppCategoriesSidebarElement;
+    new (): HTMLAppCategoriesSidebarElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-categories-sidebar": HTMLAppCategoriesSidebarElement;
+  }
+  interface ElementTagNameMap {
+    "app-categories-sidebar": HTMLAppCategoriesSidebarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-categories-sidebar": JSXElements.AppCategoriesSidebarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppCategoriesSidebarAttributes extends HTMLAttributes {
+      categories?: { id: number, name: string }[];
+    }
+  }
+}
+
+
+import {
+  AppCategories as AppCategories
+} from './components/app-categories/app-categories';
+
+declare global {
+  interface HTMLAppCategoriesElement extends AppCategories, HTMLElement {
+  }
+  var HTMLAppCategoriesElement: {
+    prototype: HTMLAppCategoriesElement;
+    new (): HTMLAppCategoriesElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-categories": HTMLAppCategoriesElement;
+  }
+  interface ElementTagNameMap {
+    "app-categories": HTMLAppCategoriesElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-categories": JSXElements.AppCategoriesAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppCategoriesAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   AppHome as AppHome
 } from './components/app-home/app-home';
 
@@ -41,31 +101,60 @@ declare global {
 
 
 import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
+  AppPopular as AppPopular
+} from './components/app-popular/app-popular';
 
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
+  interface HTMLAppPopularElement extends AppPopular, HTMLElement {
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLAppPopularElement: {
+    prototype: HTMLAppPopularElement;
+    new (): HTMLAppPopularElement;
   };
   interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "app-popular": HTMLAppPopularElement;
   }
   interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "app-popular": HTMLAppPopularElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
+      "app-popular": JSXElements.AppPopularAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
+    export interface AppPopularAttributes extends HTMLAttributes {
       
-        match?: MatchResults
+    }
+  }
+}
+
+
+import {
+  AppRecipe as AppRecipe
+} from './components/app-recipe/app-recipe';
+
+declare global {
+  interface HTMLAppRecipeElement extends AppRecipe, HTMLElement {
+  }
+  var HTMLAppRecipeElement: {
+    prototype: HTMLAppRecipeElement;
+    new (): HTMLAppRecipeElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-recipe": HTMLAppRecipeElement;
+  }
+  interface ElementTagNameMap {
+    "app-recipe": HTMLAppRecipeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-recipe": JSXElements.AppRecipeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppRecipeAttributes extends HTMLAttributes {
+      match?: MatchResults;
     }
   }
 }

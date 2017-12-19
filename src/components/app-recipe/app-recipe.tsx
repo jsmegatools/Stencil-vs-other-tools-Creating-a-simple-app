@@ -3,11 +3,11 @@ import { MatchResults } from '@stencil/router';
 
 
 @Component({
-  tag: 'app-profile',
-  styleUrl: 'app-profile.scss'
+  tag: 'app-recipe',
+  styleUrl: 'app-recipe.scss'
 })
-export class AppProfile {
-  
+export class AppRecipe {
+
   @Prop() match: MatchResults;
 
   render() {

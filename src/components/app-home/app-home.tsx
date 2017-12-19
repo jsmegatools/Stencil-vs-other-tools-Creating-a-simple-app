@@ -1,5 +1,5 @@
-import { Component } from '@stencil/core';
-
+import { Component, State } from '@stencil/core';
+import Categories from '../../mock_categories';
 
 @Component({
   tag: 'app-home',
@@ -7,21 +7,17 @@ import { Component } from '@stencil/core';
 })
 export class AppHome {
 
+  @State() categories: { id: number, name: string }[];
+
+  componentWillLoad() {
+    this.categories = Categories;
+  }
+
   render() {
     return (
-      <div>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
-
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
+      <div class="app-home-container">
+        <app-categories-sidebar categories={this.categories} />
+        <app-popular />
       </div>
     );
   }
