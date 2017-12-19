@@ -59,4 +59,8 @@ export default [
     id: 15,
     name: 'Asian'
   },
+  {
+    id: 16,
+    name: 'Salads'
+  }
 ]

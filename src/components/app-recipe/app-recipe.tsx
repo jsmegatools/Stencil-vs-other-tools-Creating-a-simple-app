@@ -1,6 +1,5 @@
-import { Component, Prop } from '@stencil/core';
-import { MatchResults } from '@stencil/router';
-
+import { Component, State, Prop } from '@stencil/core';
+import Items from '../../mock_recipes';
 
 @Component({
   tag: 'app-recipe',
@@ -8,18 +7,24 @@ import { MatchResults } from '@stencil/router';
 })
 export class AppRecipe {
 
-  @Prop() match: MatchResults;
+  @State() recipe: { id: number, name: string, photo: string, description: string }
+  @Prop() match: any
+
+  componentWillLoad() {
+    this.recipe = Items.find(item => item.id === +this.match.params.id);
+  }
 
   render() {
-    if (this.match && this.match.params.name) {
-      return (
-        <div>
-          <p>
-            Hello! My name is {this.match.params.name}.
-            My name was passed in through a route param!
-          </p>
-        </div>
-      );
-    }
+    return (
+      <div>
+        <img src={`/images/${this.recipe.photo}`} alt={this.recipe.name} />
+        <h1>
+          {this.recipe.name}
+        </h1>
+        <p>
+          {this.recipe.description}
+        </p>
+      </div>
+    );
   }
 }
