@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, PropDidChange } from '@stencil/core';
 
 @Component({
   tag: 'app-categories-sidebar',
@@ -13,7 +13,9 @@ export class AppCategoriesSidebar {
       <ul>
         {
           this.categories.map(category =>
-          <li>{category.name}</li>)
+          <stencil-route-link url={`/category/${category.id}`} activeClass="category-sidebar-active">
+            <li>{category.name}</li>
+          </stencil-route-link>)
         }
       </ul>
     );

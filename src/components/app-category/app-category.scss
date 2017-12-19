@@ -1,4 +1,7 @@
 app-category {
+  .app-category-container {
+    display: flex;
+  }
   .category-items {
     list-style: none;
     display: flex;

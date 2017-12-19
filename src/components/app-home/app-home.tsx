@@ -1,5 +1,4 @@
-import { Component, State } from '@stencil/core';
-import Categories from '../../mock_categories';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
@@ -7,11 +6,7 @@ import Categories from '../../mock_categories';
 })
 export class AppHome {
 
-  @State() categories: { id: number, name: string }[];
-
-  componentWillLoad() {
-    this.categories = Categories;
-  }
+  @Prop() categories: { id: number, name: string }[];
 
   render() {
     return (

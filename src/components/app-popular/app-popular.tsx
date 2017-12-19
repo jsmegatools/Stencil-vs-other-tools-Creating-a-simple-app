@@ -26,17 +26,21 @@ export class AppPopular {
           {this.items.map(item =>
             <li class="popular-item-container">
               <div class="card">
-                <div class="popular-item-image">
-                  <div class="card-image">
-                    <img src={`/images/${item.photo}`} />
-                    <span class="card-title">{item.name}</span>
+                <stencil-route-link url={`/recipe/${item.id}`}>
+                  <div class="popular-item-image">
+                    <div class="card-image">
+                      <img src={`/images/${item.photo}`} />
+                      <span class="card-title">{item.name}</span>
+                    </div>
                   </div>
-                </div>
+                </stencil-route-link>
                 <div class="card-content">
                   <p>{item.description}</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">View</a>
+                  <stencil-route-link url={`/recipe/${item.id}`}>
+                    View
+                  </stencil-route-link>
                 </div>
               </div>
             </li>
